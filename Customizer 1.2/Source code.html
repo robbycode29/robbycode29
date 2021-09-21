@@ -1,0 +1,18 @@
+<layout>
+  <iframe id="iframe" src="https://www.vectary.com/viewer/v1/?model=cc79e0ee-2f74-44c7-a9e2-fce56911b823&env=studio3" frameborder="0" width="100%" height="420"></iframe>
+  <style>.button {border: 3px;border-style: solid;padding: 12px 12px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;cursor: pointer;}
+  .button1 {border-radius: 50%;color: blue;background-color: #ad8526;margin: 4dp 250dp;}
+  .button2 {border-radius: 50%;color: black;background-color: #693126;margin: -34dp 300dp;}</style>
+   
+  <button id="button1"  class="button button1" onclick="click1()"></button>
+  <button id="button2" class="button button2" onclick="click2()"></button>
+  
+  <script>
+  	function click1(){ document.getElementById("iframe").src = "https://www.vectary.com/viewer/v1/?model=cc79e0ee-2f74-44c7-a9e2-fce56911b823&env=studio3";
+	document.getElementById("button2").style.color="black";
+	document.getElementById("button1").style.color="#751FFF";}
+    function click2(){ document.getElementById("iframe").src = "https://www.vectary.com/viewer/v1/?model=b59c1d0f-e92c-41b5-b0fa-f01b53d9b2f4&env=studio3";
+	document.getElementById("button1").style.color="black";
+	document.getElementById("button2").style.color="#751FFF";}
+  </script>
+</layout>
