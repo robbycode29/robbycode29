@@ -1,0 +1,130 @@
+<div>
+    <style>
+        input[id="name"] {
+            height: 40px;
+            width: 300px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-color: #999999;
+            border-width: 1px;
+            padding-left: 15px;
+            font-size: 16;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        input[id="mail"] {
+            height: 40px;
+            width: 300px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-color: #999999;
+            border-width: 1px;
+            padding-left: 15px;
+            font-size: 16;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        input[id="tel"] {
+            height: 40px;
+            width: 300px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-color: #999999;
+            border-width: 1px;
+            padding-left: 15px;
+            font-size: 16;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        textarea[id="message"] {
+            height: 200px;
+            width: 300px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-color: #999999;
+            border-width: 1px;
+            padding-left: 15px;
+            padding-top: 5px;
+            font-size: 16;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            resize:none;
+        }
+        button[id="submit"] {
+            height: 40px;
+            width: 300px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            border-color: #1C1C1C;
+            background-color: #1C1C1C;
+            color:white;
+            font-size: 16;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 600;
+            transition: 0.8s;
+        }
+        button[id="submit"]:hover {
+            height: 40px;
+            width: 300px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            border-color: #332983;
+            background-color: #332983;
+            color:white;
+            font-size: 16;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 600;
+        }
+        h5[id="sent-successfully"] {
+            position: relative;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            height: 40px;
+            width: 285px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            padding-top: 15px;
+            padding-left: 15px;
+            font-size: 16;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #59ab02;
+        }
+        h5[id="fail-to-send"] {
+            position: relative;
+            left: 0;
+            top: -65px;
+            opacity: 0;
+            height: 50px;
+            width: 285px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            padding-top: 15px;
+            padding-left: 15px;
+            font-size: 16;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #f78585;
+        }
+    </style>
+    
+    
+
+    <form class = "form-servicii" id = "form-servicii-id" action = "../oferta.php" method = "post">
+        <input type = "text" id = "name" name = "name" placeholder = "Nume complet"> <br>
+        <input type = "tel" id = "tel" name = "tel" placeholder = "Numar de telefon"> <br>
+        <input type = "text" id = "mail" name = "mail" placeholder = "E-mail"> <br>
+        <textarea id = "message" name = "message" placeholder = "Alte detalii"></textarea> <br>
+        <button  id = "submit" name = "submit"> Cere oferta </button> <br>
+        <div>
+            <br>
+            <input type = "checkbox" id = "gdpr" name = "GDPR" value="Sunt de acord cu prelucrarea datelor mele personale in conformitate cu regulamentul GDPR si semnez ca am citit pagina Confidentialitate inainte de a continua"> Sunt de acord cu prelucrarea datelor mele personale in conformitate cu regulamentul GDPR si semnez ca am citit pagina </input>
+            <a href = "./confidentialitate">Confidentialitate </a>
+            <div>inainte de a continua.</div>
+        </div>
+       
+    </form>
+</div>

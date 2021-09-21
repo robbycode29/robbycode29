@@ -1,0 +1,40 @@
+.container {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+  }
+.container input {
+    position: absolute;
+    opacity: 0;
+    
+}
+
+.checkmark {
+    text-align: center;
+    padding-top: 5px;
+    position: absolute;
+    height: 30px;
+    width: 400px;
+    top: 0;
+    left: 0;
+
+    background-color: rgb(197, 193, 211);
+}
+
+.container:hover input ~ .checkmark {
+    background-color: rgb(46, 11, 126);
+    color:rgb(197, 193, 211);
+}
+
+.container input:checked ~ .checkmark {
+    background-color: rgb(46, 11, 126);
+  }
+  

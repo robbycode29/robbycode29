@@ -1,0 +1,531 @@
+<!--SSF  -  Sisteme de securitate fizica-->
+    
+    <div>
+         <style>
+ .container {
+     display: block;
+     position:relative;
+     padding-left: 35px;
+     margin-bottom: 0px;
+     cursor: pointer;
+     font-size: 22px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-weight: 600;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+     
+     
+   }
+ .container input {
+     position: absolute;
+     opacity: 0;
+     
+     
+ }
+ 
+ .checkmarkSSF {
+     text-align: center;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     position: absolute;
+     height: 35px;
+     width:300px;
+     margin: auto;
+     transition:0.8s;
+     background-color: #f9f9f9;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+ }
+ 
+ .container:hover input ~ .checkmarkSSF {
+     background-color: #332983;
+     color:#f9f9f9;
+ }
+ 
+ .container input:checked ~ .checkmarkSSF {
+     background-color: #332983;
+     color:#f9f9f9;
+   }
+   
+         </style>
+         <script>
+ 
+             function changeContentSSF() {
+ 
+                 if(document.getElementById("checkboxSSF").checked === true) {
+                    document.getElementById("checkmarkSSF").innerHTML="Selectat";
+                    document.getElementById("ssf").style.backgroundColor = '#332983';
+                 }
+                     
+                 else {
+                    document.getElementById("checkmarkSSF").innerHTML="Selecteaza";
+                    document.getElementById("ssf").style.backgroundColor = '#666666';
+                 }
+             }
+             
+             
+         </script>
+     </div>
+     <label class = "container" onclick = changeContentSSF()>
+         <input type = "checkbox" form = "form-servicii-id" id = "checkboxSSF" name = "checkboxSSF" checked = changeContenSSF()/>
+         <span class = "checkmarkSSF" id = "checkmarkSSF">Selecteaza</span>
+     </label>
+ 
+    
+    <!--PI  -  Preventie Incendii-->
+
+     <div>
+         <style>
+ .container {
+     display: block;
+     position:relative;
+     padding-left: 35px;
+     margin-bottom: 0px;
+     cursor: pointer;
+     font-size: 22px;
+     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+     font-weight: 600;
+     -webkit-user-select: none;
+     -moz-user-select: none;
+     -ms-user-select: none;
+     user-select: none;
+     
+     
+   }
+ .container input {
+     position: absolute;
+     opacity: 0;
+     
+     
+ }
+ 
+ .checkmarkPI {
+     text-align: center;
+     padding-top: 5px;
+     padding-bottom: 5px;
+     position: absolute;
+     height: 35px;
+     width:300px;
+     margin: auto;
+     transition:0.8s;
+     background-color: #f9f9f9;
+     border-top-left-radius: 10px;
+     border-top-right-radius: 10px;
+ }
+ 
+ .container:hover input ~ .checkmarkPI {
+     background-color: #332983;
+     color:#f9f9f9;
+ }
+ 
+ .container input:checked ~ .checkmarkPI {
+     background-color: #332983;
+     color:#f9f9f9;
+   }
+   
+         </style>
+         <script>
+ 
+             
+             function changeContentPI() {
+ 
+                 if(document.getElementById("checkboxPI").checked === true) {
+                    document.getElementById("checkmarkPI").innerHTML="Selectat";
+                    document.getElementById("pi").style.backgroundColor='#332983';
+                 }
+                     
+                 else {
+                    document.getElementById("checkmarkPI").innerHTML="Selecteaza";
+                    document.getElementById("pi").style.backgroundColor='#666666';
+                }
+            } 
+             
+             
+         </script>
+     </div>
+     <label class = "container" onclick = changeContentPI()>
+         <input type = "checkbox" form = "form-servicii-id" id = "checkboxPI" name = "checkboxPI" checked = changeContentPI()/>
+         <span class = "checkmarkPI" id = "checkmarkPI">Selecteaza</span>
+     </label>
+ 
+     
+
+
+    
+    <!--DA  -  Documentatie Autorizatie / Aviz ISU-->
+    
+    <div>
+        <style>
+.container {
+    display: block;
+    position:relative;
+    padding-left: 35px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    
+  }
+.container input {
+    position: absolute;
+    opacity: 0;
+    
+}
+
+.checkmarkDA {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    height: 35px;
+    width:300px;
+    margin: auto;
+    transition:0.8s;
+    background-color: #f9f9f9;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.container:hover input ~ .checkmarkDA {
+    background-color: #332983;
+    color:#f9f9f9;
+}
+
+.container input:checked ~ .checkmarkDA {
+    background-color: #332983;
+    color:#f9f9f9;
+  }
+  
+        </style>
+        <script>
+            function changeContentDA() {
+
+                if(document.getElementById("checkboxDA").checked === true) {
+                    document.getElementById("checkmarkDA").innerHTML="Selectat";
+                    document.getElementById("da").style.backgroundColor='#332983';
+                }
+                    
+                else {
+                    document.getElementById("checkmarkDA").innerHTML="Selecteaza";
+                    document.getElementById("da").style.backgroundColor='#666666';
+                }
+            }
+            
+            
+        </script>
+    </div>
+    <label class = "container" onclick = changeContentDA()>
+        <input type = "checkbox" form = "form-servicii-id" id = "checkboxDA" name = "checkboxDA" checked = changeContentDA()/>
+        <span class = "checkmarkDA" id = "checkmarkDA">Selecteaza</span>
+    </label>
+
+
+    <!--ARSF  -  Analiza de Risc la Securitate Fizica-->
+
+
+    <div>
+        
+        <style>
+.container {
+    display: block;
+    position:relative;
+    padding-left: 35px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    
+  }
+.container input {
+    position: absolute;
+    opacity: 0;
+    
+}
+
+.checkmarkARSF {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    height: 35px;
+    width:300px;
+    margin: auto;
+    transition:0.8s;
+    background-color: #f9f9f9;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.container:hover input ~ .checkmarkARSF {
+    background-color: #332983;
+    color:#f9f9f9;
+}
+
+.container input:checked ~ .checkmarkARSF {
+    background-color: #332983;
+    color:#f9f9f9;
+  }
+  
+        </style>
+        <script>
+            function changeContentARSF() {
+
+                if(document.getElementById("checkboxARSF").checked === true) {
+                    document.getElementById("checkmarkARSF").innerHTML="Selectat";
+                    document.getElementById("arsf").style.backgroundColor='#332983';
+                }
+                    
+                else {
+                    document.getElementById("checkmarkARSF").innerHTML="Selecteaza";
+                    document.getElementById("arsf").style.backgroundColor='#666666';
+                }
+            }
+            
+            
+        </script>
+    </div>
+    <label class = "container" onclick = changeContentARSF()>
+        <input type = "checkbox" form = "form-servicii-id" id = "checkboxARSF" name = "checkboxARSF" checked = changeContentARSF()/>
+        <span class = "checkmarkARSF" id = "checkmarkARSF">Selecteaza</span>
+    </label>
+
+
+    <!--MSS  -  Mentenanta Sistemelor de Securitate-->
+  
+  
+  <div>
+    <style>
+.container {
+display: block;
+position:relative;
+padding-left: 35px;
+margin-bottom: 0px;
+cursor: pointer;
+font-size: 22px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-weight: 600;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+
+
+}
+.container input {
+position: absolute;
+opacity: 0;
+
+}
+
+.checkmarkMSS {
+text-align: center;
+padding-top: 5px;
+padding-bottom: 5px;
+position: absolute;
+height: 35px;
+width:300px;
+margin: auto;
+transition:0.8s;
+background-color: #f9f9f9;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+
+.container:hover input ~ .checkmarkMSS {
+background-color: #332983;
+color:#f9f9f9;
+}
+
+.container input:checked ~ .checkmarkMSS {
+background-color: #332983;
+color:#f9f9f9;
+}
+
+    </style>
+    <script>
+        function changeContentMSS() {
+
+            if(document.getElementById("checkboxMSS").checked === true) {
+                document.getElementById("checkmarkMSS").innerHTML="Selectat";
+                document.getElementById("mss").style.backgroundColor='#332983';
+            }
+                
+            else {
+                document.getElementById("checkmarkMSS").innerHTML="Selecteaza";
+                document.getElementById("mss").style.backgroundColor='#666666';
+            } 
+        }
+        
+        
+    </script>
+</div>
+<label class = "container" onclick = changeContentMSS()>
+    <input type = "checkbox" form = "form-servicii-id" id = "checkboxMSS" name = "checkboxMSS" checked = changeContentMSS()/>
+    <span class = "checkmarkMSS" id = "checkmarkMSS">Selecteaza</span>
+</label>
+
+
+
+<!--SHAI  -  Smart home si automatizari industriale-->
+
+
+<div>
+    <style>
+.container {
+display: block;
+position:relative;
+padding-left: 35px;
+margin-bottom: 0px;
+cursor: pointer;
+font-size: 22px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-weight: 600;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+
+
+}
+.container input {
+position: absolute;
+opacity: 0;
+
+}
+
+.checkmarkSHAI {
+text-align: center;
+padding-top: 5px;
+padding-bottom: 5px;
+position: absolute;
+height: 35px;
+width:300px;
+margin: auto;
+transition:0.8s;
+background-color: #f9f9f9;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+
+.container:hover input ~ .checkmarkSHAI {
+background-color: #332983;
+color:#f9f9f9;
+}
+
+.container input:checked ~ .checkmarkSHAI {
+background-color: #332983;
+color:#f9f9f9;
+}
+
+    </style>
+    <script>
+        function changeContentSHAI() {
+
+            if(document.getElementById("checkboxSHAI").checked === true) {
+                document.getElementById("checkmarkSHAI").innerHTML="Selectat";
+                document.getElementById("shai").style.backgroundColor='#332983';
+            }
+                
+            else {
+                document.getElementById("checkmarkSHAI").innerHTML="Selecteaza";
+                document.getElementById("shai").style.backgroundColor='#666666';
+            } 
+        }
+        
+        
+    </script>
+</div>
+<label class = "container" onclick = changeContentSHAI()>
+    <input type = "checkbox" form = "form-servicii-id" id = "checkboxSHAI" name = "checkboxSHAI" checked = changeContentSHAI()/>
+    <span class = "checkmarkSHAI" id = "checkmarkSHAI">Selecteaza</span>
+</label>
+
+
+
+
+<!--CAPA  -  Control Acces si Pontaj Automat-->
+
+<div>
+    <style>
+.container {
+display: block;
+position:relative;
+padding-left: 35px;
+margin-bottom: 0px;
+cursor: pointer;
+font-size: 22px;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-weight: 600;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+
+
+}
+.container input {
+position: absolute;
+opacity: 0;
+
+}
+
+.checkmarkCAPA {
+text-align: center;
+padding-top: 5px;
+padding-bottom: 5px;
+position: absolute;
+height: 35px;
+width:300px;
+margin: auto;
+transition:0.8s;
+background-color: #f9f9f9;
+border-top-left-radius: 10px;
+border-top-right-radius: 10px;
+}
+
+.container:hover input ~ .checkmarkCAPA {
+background-color: #332983;
+color:#f9f9f9;
+}
+
+.container input:checked ~ .checkmarkCAPA {
+background-color: #332983;
+color:#f9f9f9;
+}
+
+    </style>
+    <script>
+        function changeContentCAPA() {
+
+            if(document.getElementById("checkboxCAPA").checked === true) {
+                document.getElementById("checkmarkCAPA").innerHTML="Selectat";
+                document.getElementById("capa").style.backgroundColor = '#332983';
+            }
+                
+            else {
+                document.getElementById("checkmarkCAPA").innerHTML="Selecteaza";
+                document.getElementById("capa").style.backgroundColor = '#666666';
+            } 
+        }
+        
+        
+    </script>
+</div>
+<label class = "container" onclick = changeContentCAPA()>
+    <input type = "checkbox" form = "form-servicii-id" id = "checkboxCAPA" name = "checkboxCAPA" checked = changeContentCAPA()/>
+    <span class = "checkmarkCAPA" id = "checkmarkCAPA">Selecteaza</span>
+</label>

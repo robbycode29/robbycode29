@@ -1,0 +1,380 @@
+<script>
+    window.onload = (event) => {
+    var checkboxes = document.getElementsByTagName('input');
+
+    for (var i=0; i<checkboxes.length; i++)  {
+         if (checkboxes[i].type == 'checkbox')   {
+             checkboxes[i].checked = false;
+         }
+    }
+}
+</script>
+
+<div>
+    <style>
+        #name {
+            height: 40px;
+            width: 300px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-color: #999999;
+            border-width: 1px;
+            padding-left: 15px;
+            font-size: 16;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #mail {
+            height: 40px;
+            width: 300px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-color: #999999;
+            border-width: 1px;
+            padding-left: 15px;
+            font-size: 16;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        textarea[id="message"] {
+            height: 200px;
+            width: 300px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border-color: #999999;
+            border-width: 1px;
+            padding-left: 15px;
+            padding-top: 5px;
+            font-size: 16;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            resize:none;
+        }
+        button[id="submit"] {
+            height: 40px;
+            width: 300px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            border-color: #1C1C1C;
+            background-color: #1C1C1C;
+            color:white;
+            font-size: 16;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 600;
+            transition: 0.8s;
+        }
+        button[id="submit"]:hover {
+            height: 40px;
+            width: 300px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            border-color: #332983;
+            background-color: #332983;
+            color:white;
+            font-size: 16;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 600;
+        }
+        h5[id="sent-successfully"] {
+            position: relative;
+            left: 0;
+            top: 0;
+            opacity: 0;
+            height: 40px;
+            width: 285px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            padding-top: 15px;
+            padding-left: 15px;
+            font-size: 16;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #59ab02;
+        }
+        h5[id="fail-to-send"] {
+            position: relative;
+            left: 0;
+            top: -65px;
+            opacity: 0;
+            height: 50px;
+            width: 285px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            padding-top: 15px;
+            padding-left: 15px;
+            font-size: 16;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background-color: #f78585;
+        }
+    </style>
+    
+
+    <script>
+        /*function serviciiSelected() {
+            var optiuni = document.getElementsByClassName('optiune');
+            var selectate = "";
+            
+            for( var i = 0; i < optiuni.length; i++) {
+                
+                if(optiuni[i]) {
+                    console.log(aici);
+                    selectate = selectate + " \n" + optiuni[i].name;
+                }
+            }
+            //document.getElementById("test").innerHTML = selectate;
+            console.log(selectate);
+            //return selectate;
+        }*/
+    </script>
+    
+
+    <form class = "form-servicii" id = "form-servicii-id" name = "form1" action = "oferta.php" method = "post">
+        <input type = "text" id = "name" name = "name" placeholder = "Nume complet"> <br>
+        <input type = "text" id = "mail" name = "mail" placeholder = "E-mail"> <br>
+        <textarea id = "message" name = "message" placeholder = "Alte detalii"></textarea> <br>
+        <button  id = "submit" name = "submit"> Cere oferta </button> <br>
+        <div>
+            <h5 id = "sent-successfully">Cererea ta a fost trimisa cu succes!</h5>
+            <h5 id = "fail-to-send">A aparut o eroare. Cererea ta nu a fost trimisa.</h5>
+        </div>
+        
+       
+    </form>
+    
+</div>
+
+
+
+<div>
+    <style>
+        .container {
+        display: block;
+        position:relative;
+        padding-left: 0px;
+        margin-bottom: 50px;
+        cursor: pointer;
+        font-size: 22px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 600;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        }
+
+        .container input {
+        position: absolute;
+        opacity: 0;
+        }
+        
+
+        .ssf {
+            float: left;
+            width: 500px;
+            opacity: 1;
+            background-color: #666666;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: fit-content;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: 0.8s;
+        }
+        .container:hover input ~ .ssf {
+        background-color: #332983;
+        color:#f9f9f9;
+        }
+        .container input:checked ~ .ssf {
+        background-color: #332983;
+        color:#f9f9f9;  
+        }
+
+        .pi {
+            float: left;
+            width: 500px;
+            opacity: 1;
+            background-color: #666666;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: fit-content;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: 0.8s;
+        }
+        .container:hover input ~ .pi {
+        background-color: #332983;
+        color:#f9f9f9;
+        }
+        .container input:checked ~ .pi {
+        background-color: #332983;
+        color:#f9f9f9;  
+        }
+
+        .da {
+            float: left;
+            width: 500px;
+            opacity: 1;
+            background-color: #666666;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: fit-content;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: 0.8s;
+        }
+        .container:hover input ~ .da {
+        background-color: #332983;
+        color:#f9f9f9;
+        }
+        .container input:checked ~ .da {
+        background-color: #332983;
+        color:#f9f9f9;  
+        }
+
+        .arsf {
+            float: left;
+            width: 500px;
+            opacity: 1;
+            background-color: #666666;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: fit-content;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: 0.8s;
+        }
+        .container:hover input ~ .arsf {
+        background-color: #332983;
+        color:#f9f9f9;
+        }
+        .container input:checked ~ .arsf {
+        background-color: #332983;
+        color:#f9f9f9;  
+        }
+
+        .mss {
+            float: left;
+            width: 500px;
+            opacity: 1;
+            background-color: #666666;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: fit-content;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: 0.8s;
+        }
+        .container:hover input ~ .mss {
+        background-color: #332983;
+        color:#f9f9f9;
+        }
+        .container input:checked ~ .mss {
+        background-color: #332983;
+        color:#f9f9f9;  
+        }
+
+        .shai {
+            float: left;
+            width: 500px;
+            opacity: 1;
+            background-color: #666666;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: fit-content;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: 0.8s;
+        }
+        .container:hover input ~ .shai {
+        background-color: #332983;
+        color:#f9f9f9;
+        }
+        .container input:checked ~ .shai {
+        background-color: #332983;
+        color:#f9f9f9;  
+        }
+
+        .capa {
+            float: left;
+            width: 500px;
+            opacity: 1;
+            background-color: #666666;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: fit-content;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: 0.8s;
+        }
+        .container:hover input ~ .capa {
+        background-color: #332983;
+        color:#f9f9f9;
+        }
+        .container input:checked ~ .capa {
+        background-color: #332983;
+        color:#f9f9f9;  
+        }
+
+    </style>
+
+        <label class = "container">
+            <input type = "checkbox" class = "optiune" form = "form-servicii-id" id = "SSF" name = "checkbox[]" value = "[Sisteme de Securitate Fizica]"/>
+            <span class = "ssf" id = "ssf" name = "ssf">Sisteme de Securitate Fizica</span>
+        </label>
+        
+        <label class = "container">
+            <input type = "checkbox" class = "optiune" form = "form-servicii-id" id = "PI" name = "checkbox[]" value = "[Preventie Incendii]"/>
+            <span class = "pi" id = "pi"  name = "pi">Preventie Incendii</span>
+        </label>
+        
+        <label class = "container">
+            <input type = "checkbox" class = "optiune" form = "form-servicii-id" id = "DA" name = "checkbox[]" value = "[Documentatie Autorizatie / Aviz ISU]"/>
+            <span class = "da" id = "da" name = "da">Documentatie Autorizatie / Aviz ISU</span>
+        </label>
+        
+        <label class = "container">
+            <input type = "checkbox" class = "optiune" form = "form-servicii-id" id = "ARSF" name = "checkbox[]" value = "[Analiza de Risc la Securitate Fizica]"/>
+            <span class = "arsf" id = "arsf" name = "arsf">Analiza de Risc la Securitate Fizica</span>
+        </label>
+        
+        <label class = "container">
+            <input type = "checkbox" class = "optiune" form = "form-servicii-id" id = "MSS" name = "checkbox[]" value = "[Mentenanta Sistemelor de Securitate]"/>
+            <span class = "mss" id = "mss" name = "mss">Mentenanta Sistemelor de Securitate</span>
+        </label>
+        
+        <label class = "container">
+            <input type = "checkbox" class = "optiune" form = "form-servicii-id" id = "SHAI" name = "checkbox[]" value = "[Smart Home si Automatizari Industriale]"/>
+            <span class = "shai" id = "shai" name = "shai">Smart Home si Automatizari Industriale</span>
+        </label>
+        
+        <label class = "container">
+            <input type = "checkbox" class = "optiune" form = "form-servicii-id" id = "CAPA" name = "checkbox[]" value = "[Control Acces si Pontaj Automat]"/>
+            <span class = "capa" id = "capa" name = "capa">Control Acces si Pontaj Automat</span>
+        </label>
+</div>
+        
+    

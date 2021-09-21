@@ -1,0 +1,259 @@
+<div>
+    <style>
+        .container {
+        display: block;
+        position:relative;
+        padding-left: 0px;
+        margin-bottom: 50px;
+        cursor: pointer;
+        font-size: 22px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-weight: 600;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        }
+
+        .container input {
+        position: absolute;
+        opacity: 0;
+        }
+        
+
+        .ssf {
+            float: left;
+            width: 500px;
+            opacity: 1;
+            background-color: #666666;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: fit-content;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: 0.5s;
+        }
+        .container:hover input ~ .ssf {
+        background-color: #332983;
+        color:#f9f9f9;
+        }
+        .container input:checked ~ .ssf {
+        background-color: #332983;
+        color:#f9f9f9;  
+        }
+
+        .pi {
+            float: left;
+            width: 500px;
+            opacity: 1;
+            background-color: #666666;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: fit-content;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: 0.5s;
+        }
+        .container:hover input ~ .pi {
+        background-color: #332983;
+        color:#f9f9f9;
+        }
+        .container input:checked ~ .pi {
+        background-color: #332983;
+        color:#f9f9f9;  
+        }
+
+        .da {
+            float: left;
+            width: 500px;
+            opacity: 1;
+            background-color: #666666;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: fit-content;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: 0.5s;
+        }
+        .container:hover input ~ .da {
+        background-color: #332983;
+        color:#f9f9f9;
+        }
+        .container input:checked ~ .da {
+        background-color: #332983;
+        color:#f9f9f9;  
+        }
+
+        .arsf {
+            float: left;
+            width: 500px;
+            opacity: 1;
+            background-color: #666666;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: fit-content;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: 0.5s;
+        }
+        .container:hover input ~ .arsf {
+        background-color: #332983;
+        color:#f9f9f9;
+        }
+        .container input:checked ~ .arsf {
+        background-color: #332983;
+        color:#f9f9f9;  
+        }
+
+        .mss {
+            float: left;
+            width: 500px;
+            opacity: 1;
+            background-color: #666666;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: fit-content;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: 0.5s;
+        }
+        .container:hover input ~ .mss {
+        background-color: #332983;
+        color:#f9f9f9;
+        }
+        .container input:checked ~ .mss {
+        background-color: #332983;
+        color:#f9f9f9;  
+        }
+
+        .shai {
+            float: left;
+            width: 500px;
+            opacity: 1;
+            background-color: #666666;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: fit-content;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: 0.5s;
+        }
+        .container:hover input ~ .shai {
+        background-color: #332983;
+        color:#f9f9f9;
+        }
+        .container input:checked ~ .shai {
+        background-color: #332983;
+        color:#f9f9f9;  
+        }
+
+        .capa {
+            float: left;
+            width: 500px;
+            opacity: 1;
+            background-color: #666666;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: fit-content;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: 0.5s;
+        }
+        .container:hover input ~ .capa {
+        background-color: #332983;
+        color:#f9f9f9;
+        }
+        .container input:checked ~ .capa {
+        background-color: #332983;
+        color:#f9f9f9;  
+        }
+
+        .gt {
+            float: left;
+            width: 500px;
+            opacity: 1;
+            background-color: #666666;
+            color: white;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            height: fit-content;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 10px;
+            border-radius: 10px;
+            margin-top: 10px;
+            transition: 0.5s;
+        }
+        .container:hover input ~ .gt {
+        background-color: #332983;
+        color:#f9f9f9;
+        }
+        .container input:checked ~ .gt {
+        background-color: #332983;
+        color:#f9f9f9;  
+        }
+
+    </style>
+
+        <label class = "container">
+            <input type = "checkbox" class = "optiune" form = "form-servicii-id" id = "SSF" name = "checkbox[]" value = "[Sisteme de Securitate Fizica]"/>
+            <span class = "ssf" id = "ssf" name = "ssf">Sisteme de Securitate Fizica</span>
+        </label>
+        
+        <label class = "container">
+            <input type = "checkbox" class = "optiune" form = "form-servicii-id" id = "PI" name = "checkbox[]" value = "[Preventie Incendii]"/>
+            <span class = "pi" id = "pi"  name = "pi">Preventie Incendii</span>
+        </label>
+        
+        <label class = "container">
+            <input type = "checkbox" class = "optiune" form = "form-servicii-id" id = "DA" name = "checkbox[]" value = "[Documentatie Autorizatie / Aviz ISU]"/>
+            <span class = "da" id = "da" name = "da">Documentatie Autorizatie / Aviz ISU</span>
+        </label>
+        
+        <label class = "container">
+            <input type = "checkbox" class = "optiune" form = "form-servicii-id" id = "ARSF" name = "checkbox[]" value = "[Analiza de Risc la Securitate Fizica]"/>
+            <span class = "arsf" id = "arsf" name = "arsf">Analiza de Risc la Securitate Fizica</span>
+        </label>
+        
+        <label class = "container">
+            <input type = "checkbox" class = "optiune" form = "form-servicii-id" id = "MSS" name = "checkbox[]" value = "[Mentenanta Sistemelor de Securitate]"/>
+            <span class = "mss" id = "mss" name = "mss">Mentenanta Sistemelor de Securitate</span>
+        </label>
+        
+        <label class = "container">
+            <input type = "checkbox" class = "optiune" form = "form-servicii-id" id = "SHAI" name = "checkbox[]" value = "[Smart Home si Automatizari Industriale]"/>
+            <span class = "shai" id = "shai" name = "shai">Smart Home si Automatizari Industriale</span>
+        </label>
+        
+        <label class = "container">
+            <input type = "checkbox" class = "optiune" form = "form-servicii-id" id = "CAPA" name = "checkbox[]" value = "[Control Acces si Pontaj Automat]"/>
+            <span class = "capa" id = "capa" name = "capa">Control Acces si Pontaj Automat</span>
+        </label>
+
+        <label class = "container">
+            <input type = "checkbox" class = "optiune" form = "form-servicii-id" id = "GT" name = "checkbox[]" value = "[GPS Tracking]"/>
+            <span class = "gt" id = "gt" name = "gt">GPS Tracking</span>
+        </label>
+</div>
+        
+    

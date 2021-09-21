@@ -1,0 +1,69 @@
+
+    <div>
+       <!-- <link rel = "stylesheet" href = "button_style.css"/> -->
+        <style>
+.container {
+    display: block;
+    position:relative;
+    padding-left: 35px;
+    margin-bottom: 0px;
+    cursor: pointer;
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+    
+  }
+.container input {
+    position: absolute;
+    opacity: 0;
+    
+    
+}
+
+.checkmark {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    position: absolute;
+    height: 35px;
+    width:300px;
+    margin: auto;
+    transition:0.8s;
+    background-color: #f9f9f9;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.container:hover input ~ .checkmark {
+    background-color: #332983;
+    color:#f9f9f9;
+}
+
+.container input:checked ~ .checkmark {
+    background-color: #332983;
+    color:#f9f9f9;
+  }
+  
+        </style>
+        <script>
+
+            
+            function changeContent() {
+
+                if(document.getElementById("checkbox").checked === true)
+                    document.getElementById("checkmark").innerHTML="Selectat";
+                else document.getElementById("checkmark").innerHTML="Selecteaza";
+            }
+            
+            
+        </script>
+    </div>
+    <label class = "container" onclick = changeContent()>
+        <input type = "checkbox" id = "checkbox" name = "checkbox" checked = changeContent()/>
+        <span class = "checkmark" id = "checkmark">Selecteaza</span>
+    </label>
