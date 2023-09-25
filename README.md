@@ -1,6 +1,5 @@
 - 👋 Hi, I’m @robbycode29
-- 👀 I’m interested in Angular, React, Three.js and many others
-- 🌱 I’m currently learning vanilla, cause I'm not a pro:)))
+- 👀 I’m interested in Vue 3, Tailwind CSS, Nuxt.js and many others
 - 💞️ I’m looking to collaborate on interesting and innovating projects
 - 📫 How to reach me: robertandrei.oprescu@gmail.com
 
